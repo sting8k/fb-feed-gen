@@ -46,7 +46,7 @@ def generate_feed():
         if (match):
             # get posts
             site_url = fetch.build_site_url(username)
-            data = fetch.get_remote_data(site_url)
+            data = fetch.get_remote_data(site_url, mobile=False)
             items = fetch.extract_items(username, data)
 
             if (items and len(items) > 0):
